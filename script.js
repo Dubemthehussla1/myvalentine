@@ -30,7 +30,7 @@ yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
     <div style="text-align:center; margin-top:50px;">
       <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-      <h1 style="font-size:50px; color:#ff1493; margin-top:20px;">
+      <h1 style="font-size:40px; color:#ff1493; margin-top:20px;">
         YEEAA!!! I love you MAAMMA, See you on the 14th💋 !!
       </h1>
     </div>
