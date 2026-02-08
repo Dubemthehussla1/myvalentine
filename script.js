@@ -98,3 +98,14 @@ setInterval(() => {
 
   setTimeout(() => kiss.remove(), 6000);
 }, 600); // slightly slower interval than hearts
+const music = document.getElementById("bgMusic");
+let musicStarted = false;
+
+// Play music when the user clicks anywhere
+document.addEventListener("click", () => {
+  if (!musicStarted) {
+    music.muted = false; // unmute
+    music.play();
+    musicStarted = true;
+  }
+});
