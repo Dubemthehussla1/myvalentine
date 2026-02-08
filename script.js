@@ -87,3 +87,14 @@ setInterval(() => {
 
   setTimeout(() => heart.remove(), 6000);
 }, 400);
+setInterval(() => {
+  const kiss = document.createElement("div");
+  kiss.className = "kiss";
+  kiss.textContent = "💋"; // the kiss emoji
+  kiss.style.left = Math.random() * 100 + "vw";
+  kiss.style.fontSize = 16 + Math.random() * 24 + "px"; // random size
+  kiss.style.animationDuration = 4 + Math.random() * 4 + "s"; // random speed
+  document.body.appendChild(kiss);
+
+  setTimeout(() => kiss.remove(), 6000);
+}, 600); // slightly slower interval than hearts

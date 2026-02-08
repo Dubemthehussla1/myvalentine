@@ -148,3 +148,15 @@ button:hover {
     opacity: 0;
   }
 }
+.kiss {
+  position: fixed;
+  bottom: -20px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
