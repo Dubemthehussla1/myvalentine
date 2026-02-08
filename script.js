@@ -11,8 +11,8 @@ const noPhrases = [
   "Are you sure Maamma?",
   "What if I asked really nicely, my love?",
   "Obim please",
-  "With Enugu achicha",
-  "What about a matcha and okpa",
+  "will give achicha",
+  "What about getting you matcha and okpa",
   "PLEASE NWA",
   "But it's me oo",
   "I'm going to kill myself Maamma",
@@ -22,7 +22,7 @@ const noPhrases = [
   "asa nwa",
   "APUN'AWU PLEASE",
   "ONYE NWEM",
-  "No :(",
+  "No",
 ];
 
 // Handle Yes click

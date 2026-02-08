@@ -79,8 +79,8 @@ button:hover {
   }
 }
 .video-wrapper {
-  width: 220px;
-  height: 220px;
+  width: 350px;
+  height: 350px;
   margin: 20px auto;
   border-radius: 50%;
   overflow: hidden;
@@ -94,8 +94,8 @@ button:hover {
 }
 @media (max-width: 600px) {
   .video-wrapper {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
   }
 }
 .video-wrapper {
