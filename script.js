@@ -31,7 +31,7 @@ yesBtn.addEventListener("click", () => {
     <div style="text-align:center; margin-top:50px;">
       <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
       <h1 style="font-size:35px; color:#ff1493; margin-top:20px;">
-        YEEAA!!! I love you MAAMMA, See you on the 14th💋 !!
+        YEEAA!!! I love you MAAMMA, Can't wait to see you on the 14th💋 !!
       </h1>
     </div>
   `;
