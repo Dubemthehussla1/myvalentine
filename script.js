@@ -1,11 +1,9 @@
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
-const music = document.getElementById("bgMusic");
 
-let noCount = 0;
-let yesSize = 22;
-const yesMaxSize = 300;
-let musicStarted = false;
+let noCount = 0; // Track number of No clicks
+let yesSize = 22; // starting font size of Yes button
+const yesMaxSize = 300; // Max font size for Yes button
 
 // No button phrases
 const noPhrases = [
@@ -27,57 +25,45 @@ const noPhrases = [
   "No :(",
 ];
 
-// 🔊 Start music safely (only once)
-function startMusic() {
-  if (!musicStarted) {
-    music.play().catch(() => {});
-    musicStarted = true;
-  }
-}
-
-// YES click
+// Handle Yes click
 yesBtn.addEventListener("click", () => {
-  startMusic();
+  // Keep the audio playing
+  const music = document.getElementById("bgMusic");
 
+  // Replace the visible content but keep the audio element
   document.body.innerHTML = `
     <div style="text-align:center; margin-top:50px;">
       <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-      <h1 style="font-size:50px; color:#ff1493; margin-top:20px;">
+      <h1 style="font-size:50px; color: #ff1493; margin-top:20px;">
         WOOOOOO!!! I love you Maamma, See you on the 14th!! ;))
       </h1>
     </div>
   `;
-
-  // Re-attach music and keep playing
+  // Add back the audio element
   document.body.appendChild(music);
-  music.play().catch(() => {});
 });
 
-// NO click
+// Handle No click
 noBtn.addEventListener("click", () => {
-  startMusic();
-
   noCount++;
 
+  // Change No button text
   const phraseIndex = Math.min(noCount, noPhrases.length - 1);
   noBtn.textContent = noPhrases[phraseIndex];
 
-  // Shrink No
+  // Shrink No button slightly
   const currentNoSize = parseInt(window.getComputedStyle(noBtn).fontSize);
   noBtn.style.fontSize = Math.max(currentNoSize - 1, 12) + "px";
 
-  // Grow Yes
-  yesSize += 15;
+  // Grow Yes button
+  yesSize += 15; // increase Yes size every No click
   if (yesSize > yesMaxSize) yesSize = yesMaxSize;
   yesBtn.style.fontSize = yesSize + "px";
 
-  // Random move
+  // Move No button randomly for fun (optional)
+  const x = Math.random() * 80;
+  const y = Math.random() * 80;
   noBtn.style.position = "absolute";
-  noBtn.style.left = Math.random() * 80 + "%";
-  noBtn.style.top = Math.random() * 80 + "%";
-
-  // Hide No after "ONYE NWEM"
-  if (noCount >= noPhrases.indexOf("ONYE NWEM") + 1) {
-    noBtn.style.display = "none";
-  }
+  noBtn.style.left = x + "%";
+  noBtn.style.top = y + "%";
 });
