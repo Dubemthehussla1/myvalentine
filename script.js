@@ -33,7 +33,7 @@ yesBtn.addEventListener("click", () => {
       <h1 style="font-size:35px; color:#ff1493; margin-top:20px;">
         YEEAA!!! I love you MAAMMA, Can't wait to see you on the 14th💋 !!
       </h1>
-    <p style="color:#ff1493;"> make sure you have a nice week and no one should stress your life out untill you get home light of the world </p>
+    <p style="font-size:20px; color:#ff1493;"> make sure you have a nice week and no one should stress your life out untill you get home light of the world </p>
     </div>
   `;
 
